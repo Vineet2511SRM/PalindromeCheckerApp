@@ -1,88 +1,103 @@
-# PalindromeCheckerApp
+# 🧩 Palindrome Checker Management System
 
-📘 Palindrome Checker Management System
-🚀 Use Case 1: Application Entry & Welcome Message
-📌 Project Overview
+A console-based Java application that validates whether a given string is a palindrome using different validation techniques across progressive use cases.
 
-The Palindrome Checker Management System is a Java-based console application.
+This project strengthens **core programming fundamentals**, **data structure usage**, and **algorithm design thinking**.
 
-This repository currently implements Use Case 1, which focuses on:
+---
 
-Establishing the main entry point of the application
+## 📌 Project Objective
 
-Displaying a welcome message
+Design and implement a Java application that checks palindrome strings under multiple validation strategies while demonstrating algorithm efficiency and data structure usage.
 
-Showing the application version
+---
 
-Confirming successful system initialization
+## 🚀 Implemented Use Cases
 
-⚠️ Note: No palindrome checking logic has been implemented yet.
-This phase is focused purely on application startup structure.
+### ✅ UC1 — Application Entry
 
-🏗️ Class Implemented
-PalindromeCheckerApp
+Program initialization and execution structure.
 
-This is the main class of the application.
+### ✅ UC2 — Two-Pointer String Comparison
 
-It contains:
+Direct comparison from both ends of string.
 
-main(String[] args) method (JVM entry point)
+### ✅ UC3 — Reverse String Comparison
 
-Startup messages
+Reverse string and compare with original.
 
-Version display
+### ✅ UC4 — Character Array Based Validation
 
-🖥️ Program Output
+Convert string to `char[]` and compare using index-based access.
 
-When executed, the application displays:
+### ✅ UC5 — Stack Based Palindrome Checker ⭐
 
-Welcome to the Palindrome Checker Management System
-Version : 1.0
-System initialized successfully
+**Goal**
+Use stack to reverse characters and validate palindrome.
 
-📥 How to Clone the Repository
-git clone https://github.com/Vineet2511SRM/PalindromeCheckerApp.git
+**Flow**
 
+1. Push characters into stack
+2. Pop characters in reverse order
+3. Compare with original string
+4. Print result
 
-After cloning:
+**Key Concepts**
 
-cd PalindromeCheckerApp
+* Stack (LIFO structure)
+* Push operation
+* Pop operation
+* Natural reversal behavior
+* Data structure driven validation
 
-▶️ How to Compile and Run
-Compile
+**Data Structure:** Stack
+**Time Complexity:** O(n)
+**Space Complexity:** O(n)
+
+**Sample Output**
+
+```
+Input : noon
+Is Palindrome? : true
+```
+
+---
+
+## 🏗️ Approach Comparison
+
+| Use Case | Method          | Extra Space | Concept Focus           |
+| -------- | --------------- | ----------- | ----------------------- |
+| UC2      | Two-pointer     | None        | Efficient comparison    |
+| UC3      | Reverse string  | O(n)        | Transformation          |
+| UC4      | Character array | Minimal     | Index-based access      |
+| UC5      | Stack           | O(n)        | Data structure reversal |
+
+---
+
+## ▶️ How to Compile and Run
+
+### Compile
+
+```bash
 javac PalindromeCheckerApp.java
+```
 
-Run
+### Run
+
+```bash
 java PalindromeCheckerApp
+```
 
-🛠️ Technologies Used
+---
 
-Java
+## 🛠️ Technologies Used
 
-Git
+* Java 17+
+* Git & GitHub
 
-GitHub
+---
 
-📚 Git Commands Practiced
-
-During this use case, the following Git commands were practiced:
-
-git status
-
-git add
-
-git restore
-
-git restore --staged
-
-git commit
-
-git push
-
-git clone
-
-👨‍💻 Author
+## 👨‍💻 Author
 
 Vineet Seth
 GitHub: https://github.com/Vineet2511SRM
-Version: 1.0
