@@ -87,8 +87,7 @@ Implements an optimized character comparison algorithm using the **two-pointer a
 
 ### ✅ UC1 — Application Entry
 
->>>>>>> e60fdb380d9df47691ceaaef696ae5e0b7eff173
-```
+
 Welcome to the Palindrome Checker Management System
 Version : 1.0
 System initialized successfully
