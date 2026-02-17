@@ -1,108 +1,76 @@
 # 🧩 Palindrome Checker Management System
 
-A console-based Java application that validates whether a given string is a palindrome using multiple validation techniques.
+A console-based Java application that validates whether a given string is a palindrome using different validation techniques across progressive use cases.
 
-The project progressively introduces different approaches to strengthen **core programming fundamentals**, **string handling**, and **data structure understanding**.
+This project strengthens **core programming fundamentals**, **data structure usage**, and **algorithm design thinking**.
 
 ---
 
 ## 📌 Project Objective
 
-Design and implement a Java application that checks palindrome strings under different validation strategies while demonstrating algorithm efficiency and memory awareness.
+Design and implement a Java application that checks palindrome strings under multiple validation strategies while demonstrating algorithm efficiency and data structure usage.
 
 ---
 
 ## 🚀 Implemented Use Cases
 
----
-
 ### ✅ UC1 — Application Entry
 
-Initializes the system and displays startup information.
-
-**Concepts**
-
-* Class structure
-* `main()` method
-* Program initialization
-
----
+Program initialization and execution structure.
 
 ### ✅ UC2 — Two-Pointer String Comparison
 
-Compares characters directly from both ends of the string.
-
-**Flow**
-
-* Compare start and end characters
-* Move inward
-* Stop on mismatch
-
-**Data Structure:** String
-**Time Complexity:** O(n)
-**Extra Space:** None
-
----
+Direct comparison from both ends of string.
 
 ### ✅ UC3 — Reverse String Comparison
 
-Reverses the string and compares it with the original.
+Reverse string and compare with original.
 
-**Flow**
+### ✅ UC4 — Character Array Based Validation
 
-* Traverse string in reverse
-* Build reversed string
-* Compare using `equals()`
+Convert string to `char[]` and compare using index-based access.
 
-**Data Structure:** String
-**Time Complexity:** O(n)
-**Extra Space:** O(n)
-
----
-
-### ✅ UC4 — Character Array Based Palindrome Check ⭐
+### ✅ UC5 — Stack Based Palindrome Checker ⭐
 
 **Goal**
-Convert string to character array and compare characters using index-based access.
+Use stack to reverse characters and validate palindrome.
 
 **Flow**
 
-1. Convert string to `char[]`
-2. Use two-pointer technique
-3. Compare start and end characters
-4. Stop on mismatch
+1. Push characters into stack
+2. Pop characters in reverse order
+3. Compare with original string
+4. Print result
 
 **Key Concepts**
 
-* Character Array (`char[]`)
-* Array indexing
-* Two-pointer technique
-* Efficient comparison without extra object creation
-* Time complexity awareness
+* Stack (LIFO structure)
+* Push operation
+* Pop operation
+* Natural reversal behavior
+* Data structure driven validation
 
-**Data Structure:** `char[]`
+**Data Structure:** Stack
 **Time Complexity:** O(n)
-**Extra Space:** Minimal (array representation)
+**Space Complexity:** O(n)
+
+**Sample Output**
+
+```
+Input : noon
+Is Palindrome? : true
+```
 
 ---
 
 ## 🏗️ Approach Comparison
 
-| Use Case | Method             | Extra Space | Performance | Concept Focus         |
-| -------- | ------------------ | ----------- | ----------- | --------------------- |
-| UC1      | Initialization     | None        | —           | Program structure     |
-| UC2      | Two-pointer string | None        | Fast        | Direct comparison     |
-| UC3      | Reverse string     | Yes         | Moderate    | String transformation |
-| UC4      | Character array    | Minimal     | Efficient   | Memory & indexing     |
-
----
-
-## 🖥️ Sample Output (UC4)
-
-```
-Input : radar
-Is Palindrome? : true
-```
+| Use Case | Method          | Extra Space | Concept Focus           |
+| -------- | --------------- | ----------- | ----------------------- |
+| UC2      | Two-pointer     | None        | Efficient comparison    |
+| UC3      | Reverse string  | O(n)        | Transformation          |
+| UC4      | Character array | Minimal     | Index-based access      |
+| UC5      | Stack           | O(n)        | Data structure reversal |
 
 ---
 
@@ -126,22 +94,6 @@ java PalindromeCheckerApp
 
 * Java 17+
 * Git & GitHub
-
-
-
-
-
-
----
-
-## 🔮 Future Enhancements
-
-* User input validation
-* Case-insensitive comparison
-* Ignore spaces and special characters
-* StringBuilder optimization
-* Menu-driven application
-* Performance benchmarking
 
 ---
 
