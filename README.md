@@ -87,15 +87,9 @@ Implements an optimized character comparison algorithm using the **two-pointer a
 
 ### ✅ UC1 — Application Entry
 
-
 Welcome to the Palindrome Checker Management System
 Version : 1.0
 System initialized successfully
-<<<<<<< HEAD
---------------------------------------------------
-```
-
----
 
 ### ✅ UC2 — Hardcoded Palindrome Validation (Two-Pointer Method)
 
