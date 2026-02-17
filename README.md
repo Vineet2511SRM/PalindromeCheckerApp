@@ -1,88 +1,151 @@
-# PalindromeCheckerApp
+# 🧩 Palindrome Checker Management System
 
-📘 Palindrome Checker Management System
-🚀 Use Case 1: Application Entry & Welcome Message
-📌 Project Overview
+A console-based Java application that validates whether a given string is a palindrome using multiple validation techniques.
 
-The Palindrome Checker Management System is a Java-based console application.
+The project progressively introduces different approaches to strengthen **core programming fundamentals**, **string handling**, and **data structure understanding**.
 
-This repository currently implements Use Case 1, which focuses on:
+---
 
-Establishing the main entry point of the application
+## 📌 Project Objective
 
-Displaying a welcome message
+Design and implement a Java application that checks palindrome strings under different validation strategies while demonstrating algorithm efficiency and memory awareness.
 
-Showing the application version
+---
 
-Confirming successful system initialization
+## 🚀 Implemented Use Cases
 
-⚠️ Note: No palindrome checking logic has been implemented yet.
-This phase is focused purely on application startup structure.
+---
 
-🏗️ Class Implemented
-PalindromeCheckerApp
+### ✅ UC1 — Application Entry
 
-This is the main class of the application.
+Initializes the system and displays startup information.
 
-It contains:
+**Concepts**
 
-main(String[] args) method (JVM entry point)
+* Class structure
+* `main()` method
+* Program initialization
 
-Startup messages
+---
 
-Version display
+### ✅ UC2 — Two-Pointer String Comparison
 
-🖥️ Program Output
+Compares characters directly from both ends of the string.
 
-When executed, the application displays:
+**Flow**
 
-Welcome to the Palindrome Checker Management System
-Version : 1.0
-System initialized successfully
+* Compare start and end characters
+* Move inward
+* Stop on mismatch
 
-📥 How to Clone the Repository
-git clone https://github.com/Vineet2511SRM/PalindromeCheckerApp.git
+**Data Structure:** String
+**Time Complexity:** O(n)
+**Extra Space:** None
 
+---
 
-After cloning:
+### ✅ UC3 — Reverse String Comparison
 
-cd PalindromeCheckerApp
+Reverses the string and compares it with the original.
 
-▶️ How to Compile and Run
-Compile
+**Flow**
+
+* Traverse string in reverse
+* Build reversed string
+* Compare using `equals()`
+
+**Data Structure:** String
+**Time Complexity:** O(n)
+**Extra Space:** O(n)
+
+---
+
+### ✅ UC4 — Character Array Based Palindrome Check ⭐
+
+**Goal**
+Convert string to character array and compare characters using index-based access.
+
+**Flow**
+
+1. Convert string to `char[]`
+2. Use two-pointer technique
+3. Compare start and end characters
+4. Stop on mismatch
+
+**Key Concepts**
+
+* Character Array (`char[]`)
+* Array indexing
+* Two-pointer technique
+* Efficient comparison without extra object creation
+* Time complexity awareness
+
+**Data Structure:** `char[]`
+**Time Complexity:** O(n)
+**Extra Space:** Minimal (array representation)
+
+---
+
+## 🏗️ Approach Comparison
+
+| Use Case | Method             | Extra Space | Performance | Concept Focus         |
+| -------- | ------------------ | ----------- | ----------- | --------------------- |
+| UC1      | Initialization     | None        | —           | Program structure     |
+| UC2      | Two-pointer string | None        | Fast        | Direct comparison     |
+| UC3      | Reverse string     | Yes         | Moderate    | String transformation |
+| UC4      | Character array    | Minimal     | Efficient   | Memory & indexing     |
+
+---
+
+## 🖥️ Sample Output (UC4)
+
+```
+Input : radar
+Is Palindrome? : true
+```
+
+---
+
+## ▶️ How to Compile and Run
+
+### Compile
+
+```bash
 javac PalindromeCheckerApp.java
+```
 
-Run
+### Run
+
+```bash
 java PalindromeCheckerApp
+```
 
-🛠️ Technologies Used
+---
 
-Java
+## 🛠️ Technologies Used
 
-Git
+* Java 17+
+* Git & GitHub
 
-GitHub
 
-📚 Git Commands Practiced
 
-During this use case, the following Git commands were practiced:
 
-git status
 
-git add
 
-git restore
+---
 
-git restore --staged
+## 🔮 Future Enhancements
 
-git commit
+* User input validation
+* Case-insensitive comparison
+* Ignore spaces and special characters
+* StringBuilder optimization
+* Menu-driven application
+* Performance benchmarking
 
-git push
+---
 
-git clone
-
-👨‍💻 Author
+## 👨‍💻 Author
 
 Vineet Seth
 GitHub: https://github.com/Vineet2511SRM
-Version: 1.0
