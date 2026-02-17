@@ -99,5 +99,5 @@ java PalindromeCheckerApp
 
 ## 👨‍💻 Author
 
-Vineet Seth
+**Vineet Seth**
 GitHub: https://github.com/Vineet2511SRM
