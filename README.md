@@ -1,88 +1,173 @@
-# PalindromeCheckerApp
+# 🧩 Palindrome Checker Management System
 
-📘 Palindrome Checker Management System
-🚀 Use Case 1: Application Entry & Welcome Message
-📌 Project Overview
+A console-based Java application that validates whether a given string is a palindrome using different validation techniques across progressive use cases.
 
-The Palindrome Checker Management System is a Java-based console application.
+This project is designed to strengthen **core programming fundamentals**, **string manipulation**, and **algorithmic thinking**.
 
-This repository currently implements Use Case 1, which focuses on:
+---
 
-Establishing the main entry point of the application
+## 📌 Project Overview
 
-Displaying a welcome message
+The **Palindrome Checker Management System** demonstrates multiple approaches to palindrome validation through structured development stages (Use Cases).
 
-Showing the application version
+Each use case introduces new concepts and techniques while building on previous learning.
 
-Confirming successful system initialization
+Current implementation includes:
 
-⚠️ Note: No palindrome checking logic has been implemented yet.
-This phase is focused purely on application startup structure.
+* **UC1 — Application Entry & System Initialization**
+* **UC2 — Two-Pointer Character Comparison**
+* **UC3 — Reverse String Comparison**
 
-🏗️ Class Implemented
-PalindromeCheckerApp
+---
 
-This is the main class of the application.
+## 🚀 Use Case Details
 
-It contains:
+---
 
-main(String[] args) method (JVM entry point)
+### ✅ UC1 — Application Entry
 
-Startup messages
+**Goal:**
+Initialize the system and display startup information.
 
-Version display
+**Concepts Used:**
 
-🖥️ Program Output
+* Class and `main()` method
+* Program execution flow
+* Console output formatting
 
-When executed, the application displays:
+**Sample Output**
 
+```
 Welcome to the Palindrome Checker Management System
 Version : 1.0
 System initialized successfully
+--------------------------------------------------
+```
 
-📥 How to Clone the Repository
-git clone https://github.com/Vineet2511SRM/PalindromeCheckerApp.git
+---
 
+### ✅ UC2 — Hardcoded Palindrome Validation (Two-Pointer Method)
 
-After cloning:
+**Goal:**
+Check whether a string is a palindrome by comparing characters from both ends.
 
-cd PalindromeCheckerApp
+**Logic:**
 
-▶️ How to Compile and Run
-Compile
+* Compare first and last characters
+* Move inward toward center
+* Stop early if mismatch found
+
+**Key Concepts:**
+
+* Two-pointer technique
+* Loop optimization (`length / 2`)
+* Boolean flag control
+* Efficient comparison without extra memory
+
+**Time Complexity:** O(n)
+
+**Sample Output**
+
+```
+Input text: madam
+Is it a Palindrome? : true
+```
+
+---
+
+### ✅ UC3 — Reverse String Based Palindrome Check
+
+**Goal:**
+Check palindrome by reversing the string and comparing it with the original.
+
+**Logic:**
+
+* Iterate string in reverse order
+* Build reversed string
+* Compare using `equals()`
+
+**Key Concepts:**
+
+* For loop reverse traversal
+* String immutability
+* String concatenation
+* Transformation-based validation
+
+**Time Complexity:** O(n)
+**Space Complexity:** O(n) (extra reversed string)
+
+**Sample Output**
+
+```
+Input text: madam
+Reversed text: madam
+Is it a Palindrome? : true
+```
+
+---
+
+## 🏗️ Comparison of Approaches
+
+| Use Case | Method                    | Extra Space | Performance     | Concept Focus        |
+| -------- | ------------------------- | ----------- | --------------- | -------------------- |
+| UC1      | System initialization     | None        | —               | Program structure    |
+| UC2      | Two-pointer comparison    | No          | Fastest         | Algorithm efficiency |
+| UC3      | Reverse string comparison | Yes         | Slightly slower | String manipulation  |
+
+---
+
+## ▶️ How to Compile and Run
+
+### Compile Java File
+
+```bash
 javac PalindromeCheckerApp.java
+```
 
-Run
+### Run Program
+
+```bash
 java PalindromeCheckerApp
+```
 
-🛠️ Technologies Used
+---
 
-Java
+## 🛠️ Technologies Used
 
-Git
+* Java 17+
+* Git
+* GitHub
 
-GitHub
+---
 
-📚 Git Commands Practiced
+## 📚 Concepts Learned
 
-During this use case, the following Git commands were practiced:
+* Program entry structure in Java
+* String handling and immutability
+* Loop control and optimization
+* Algorithm design strategies
+* Time and space trade-offs
+* Multiple problem-solving approaches
 
-git status
+---
 
-git add
 
-git restore
 
-git restore --staged
 
-git commit
+## 🔮 Future Enhancements
 
-git push
+* User input palindrome checking
+* Case-insensitive comparison
+* Ignore spaces and special characters
+* StringBuilder optimization
+* Menu-driven interface
+* Performance benchmarking
 
-git clone
+---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Vineet Seth
+**Vineet Seth**
 GitHub: https://github.com/Vineet2511SRM
-Version: 1.0
+
+---
