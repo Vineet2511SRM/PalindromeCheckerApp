@@ -1,115 +1,68 @@
 # 🧩 Palindrome Checker Management System
 
-A console-based Java application that validates whether a given string is a palindrome using different validation techniques across progressive use cases.
+A console-based Java application that validates whether a given string is a palindrome using multiple validation techniques.
 
-This project is designed to strengthen **core programming fundamentals**, **string manipulation**, and **algorithmic thinking**.
-
----
-
-## 📌 Project Overview
-
-The **Palindrome Checker Management System** demonstrates multiple approaches to palindrome validation through structured development stages (Use Cases).
-
-Each use case introduces new concepts and techniques while building on previous learning.
-
-Current implementation includes:
-
-* **UC1 — Application Entry & System Initialization**
-* **UC2 — Two-Pointer Character Comparison**
-* **UC3 — Reverse String Comparison**
-* **UC4 — Character Array Based Validation**
+The project progressively introduces different approaches to strengthen **core programming fundamentals**, **string handling**, and **data structure understanding**.
 
 ---
 
-## 🚀 Use Case Details
+## 📌 Project Objective
+
+Design and implement a Java application that checks palindrome strings under different validation strategies while demonstrating algorithm efficiency and memory awareness.
+
+---
+
+## 🚀 Implemented Use Cases
 
 ---
 
 ### ✅ UC1 — Application Entry
 
-**Goal:**
-Initialize the system and display startup information.
+Initializes the system and displays startup information.
 
-**Concepts Used**
+**Concepts**
 
-* Class and `main()` method
-* Program execution flow
-* Console output formatting
-
-**Sample Output**
-
-```
-Welcome to the Palindrome Checker Management System
-Version : 1.0
-System initialized successfully
---------------------------------------------------
-```
+* Class structure
+* `main()` method
+* Program initialization
 
 ---
 
-### ✅ UC2 — Hardcoded Palindrome Validation (Two-Pointer Method)
+### ✅ UC2 — Two-Pointer String Comparison
 
-**Goal:**
-Check whether a string is a palindrome by comparing characters from both ends.
+Compares characters directly from both ends of the string.
 
-**Logic**
+**Flow**
 
-* Compare first and last characters
-* Move inward toward center
-* Stop early if mismatch found
+* Compare start and end characters
+* Move inward
+* Stop on mismatch
 
-**Key Concepts**
-
-* Two-pointer technique
-* Loop optimization (`length / 2`)
-* Boolean flag control
-* Efficient comparison without extra memory
-
+**Data Structure:** String
 **Time Complexity:** O(n)
-
-**Sample Output**
-
-```
-Input text: madam
-Is it a Palindrome? : true
-```
+**Extra Space:** None
 
 ---
 
-### ✅ UC3 — Reverse String Based Palindrome Check
+### ✅ UC3 — Reverse String Comparison
 
-**Goal:**
-Check palindrome by reversing the string and comparing it with the original.
+Reverses the string and compares it with the original.
 
-**Logic**
+**Flow**
 
-* Iterate string in reverse order
+* Traverse string in reverse
 * Build reversed string
 * Compare using `equals()`
 
-**Key Concepts**
-
-* For loop reverse traversal
-* String immutability
-* String concatenation
-* Transformation-based validation
-
+**Data Structure:** String
 **Time Complexity:** O(n)
-**Space Complexity:** O(n)
-
-**Sample Output**
-
-```
-Input text: madam
-Reversed text: madam
-Is it a Palindrome? : true
-```
+**Extra Space:** O(n)
 
 ---
 
 ### ✅ UC4 — Character Array Based Palindrome Check ⭐
 
-**Goal:**
+**Goal**
 Convert string to character array and compare characters using index-based access.
 
 **Flow**
@@ -121,17 +74,30 @@ Convert string to character array and compare characters using index-based acces
 
 **Key Concepts**
 
-* Character array (`char[]`)
+* Character Array (`char[]`)
 * Array indexing
 * Two-pointer technique
-* Efficient comparison without creating extra objects
+* Efficient comparison without extra object creation
 * Time complexity awareness
 
-**Data Structure:** char[]
+**Data Structure:** `char[]`
 **Time Complexity:** O(n)
-**Extra Space:** Minimal
+**Extra Space:** Minimal (array representation)
 
-**Sample Output**
+---
+
+## 🏗️ Approach Comparison
+
+| Use Case | Method             | Extra Space | Performance | Concept Focus         |
+| -------- | ------------------ | ----------- | ----------- | --------------------- |
+| UC1      | Initialization     | None        | —           | Program structure     |
+| UC2      | Two-pointer string | None        | Fast        | Direct comparison     |
+| UC3      | Reverse string     | Yes         | Moderate    | String transformation |
+| UC4      | Character array    | Minimal     | Efficient   | Memory & indexing     |
+
+---
+
+## 🖥️ Sample Output (UC4)
 
 ```
 Input : radar
@@ -140,26 +106,15 @@ Is Palindrome? : true
 
 ---
 
-## 🏗️ Comparison of Approaches
-
-| Use Case | Method                     | Extra Space | Performance | Concept Focus         |
-| -------- | -------------------------- | ----------- | ----------- | --------------------- |
-| UC1      | System initialization      | None        | —           | Program structure     |
-| UC2      | Two-pointer comparison     | None        | Fastest     | Algorithm efficiency  |
-| UC3      | Reverse string comparison  | Yes         | Moderate    | String transformation |
-| UC4      | Character array comparison | Minimal     | Efficient   | Memory & indexing     |
-
----
-
 ## ▶️ How to Compile and Run
 
-### Compile Java File
+### Compile
 
 ```bash
 javac PalindromeCheckerApp.java
 ```
 
-### Run Program
+### Run
 
 ```bash
 java PalindromeCheckerApp
@@ -170,30 +125,22 @@ java PalindromeCheckerApp
 ## 🛠️ Technologies Used
 
 * Java 17+
-* Git
-* GitHub
+* Git & GitHub
 
----
 
-## 📚 Concepts Learned
 
-* Program entry structure in Java
-* String handling and immutability
-* Loop control and optimization
-* Array indexing and traversal
-* Algorithm design strategies
-* Time and space trade-offs
-* Multiple problem-solving approaches
+
+
 
 ---
 
 ## 🔮 Future Enhancements
 
-* User input palindrome checking
+* User input validation
 * Case-insensitive comparison
 * Ignore spaces and special characters
 * StringBuilder optimization
-* Menu-driven interface
+* Menu-driven application
 * Performance benchmarking
 
 ---
