@@ -1,88 +1,121 @@
-# PalindromeCheckerApp
+# 🧩 Palindrome Checker Management System
 
-📘 Palindrome Checker Management System
-🚀 Use Case 1: Application Entry & Welcome Message
-📌 Project Overview
+🚀 **Use Case 2: Hardcoded Palindrome Validation**
 
-The Palindrome Checker Management System is a Java-based console application.
+---
 
-This repository currently implements Use Case 1, which focuses on:
+## 📌 Project Overview
 
-Establishing the main entry point of the application
+The **Palindrome Checker Management System** is a console-based Java application that validates whether a given string is a palindrome.
 
-Displaying a welcome message
+This project focuses on strengthening **core programming fundamentals** and **basic data structure logic**.
 
-Showing the application version
+The repository is updated to **Version 2.0**, which includes the following milestones:
 
-Confirming successful system initialization
+✅ **UC1 — Application Entry**
+Establishes the main entry point and system initialization messages.
 
-⚠️ Note: No palindrome checking logic has been implemented yet.
-This phase is focused purely on application startup structure.
+✅ **UC2 — Palindrome Logic**
+Implements an optimized character comparison algorithm using the **two-pointer approach**.
 
-🏗️ Class Implemented
-PalindromeCheckerApp
+---
 
-This is the main class of the application.
+## 🏗️ Implementation Details
 
-It contains:
+### 🔹 Key Concepts Used in UC2
 
-main(String[] args) method (JVM entry point)
+* **Class & Main Method** — Entry point for JVM execution
+* **String Literals** — Using predefined input from the String constant pool
+* **Two-Pointer Technique** — Compare characters from both ends
+* **Loop Optimization** — Iterate only up to `input.length() / 2`
 
-Startup messages
+---
 
-Version display
+## 🔄 Logic Flow
 
-🖥️ Program Output
+1. Program starts and displays system welcome messages.
+2. A hardcoded string (example: `"madam"`) is initialized.
+3. A loop compares characters at:
 
-When executed, the application displays:
+    * index `i`
+    * index `length - 1 - i`
+4. If mismatch occurs → `isPalindrome = false` and loop stops.
+5. Final result is displayed in the console.
 
+---
+
+## 🖥️ Program Output
+
+### ✅ UC1 — Application Entry
+
+```
 Welcome to the Palindrome Checker Management System
 Version : 1.0
 System initialized successfully
+```
 
-📥 How to Clone the Repository
+### ✅ UC2 — Hardcoded Palindrome Validation
+
+```
+Input text: madam
+Is it a Palindrome? : true
+```
+
+### ✅ Combined Execution Output (UC1 + UC2)
+
+```
+Welcome to the Palindrome Checker Management System
+Version : 2.0
+System initialized successfully
+--------------------------------------------------
+Input text: madam
+Is it a Palindrome? : true
+```
+
+---
+
+## ▶️ How to Compile and Run
+
+### 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/Vineet2511SRM/PalindromeCheckerApp.git
-
-
-After cloning:
-
 cd PalindromeCheckerApp
+```
 
-▶️ How to Compile and Run
-Compile
+### 2️⃣ Compile the Program
+
+```bash
 javac PalindromeCheckerApp.java
+```
 
-Run
+### 3️⃣ Run the Program
+
+```bash
 java PalindromeCheckerApp
+```
 
-🛠️ Technologies Used
+---
 
-Java
+## 🛠️ Technologies Used
 
-Git
+* **Language:** Java 17+
+* **Version Control:** Git & GitHub
 
-GitHub
+---
 
-📚 Git Commands Practiced
+## 📚 Git Commands Practiced
 
-During this use case, the following Git commands were practiced:
-
+```bash
 git status
+git add PalindromeCheckerApp.java
+git commit -m "Update UC2: Implement hardcoded palindrome validation logic"
+git push origin main
+```
 
-git add
+---
 
-git restore
+## 👨‍💻 Author
 
-git restore --staged
-
-git commit
-
-git push
-
-git clone
-
-👨‍💻 Author
-
-Vineet Seth
+**Vineet Seth**
 GitHub: https://github.com/Vineet2511SRM
-Version: 1.0
