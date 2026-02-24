@@ -1,52 +1,55 @@
 # 🧩 Palindrome Checker App
-## Use Case 10 — Case-Insensitive & Space-Ignored Palindrome
+## Use Case 12 — Strategy Pattern for Palindrome Algorithms
 
 ### 📌 Objective
-To validate whether a string is a palindrome while ignoring spaces, special characters, and letter case.
+To demonstrate dynamic selection of palindrome algorithms using the Strategy Design Pattern.
 
 ---
 
 ## 📖 Description
 
-This implementation preprocesses the input string before validation.
+This implementation introduces the Strategy Pattern.
 
-Normalization includes:
-- Removing spaces and special characters
-- Converting all characters to lowercase
+It includes:
 
-After preprocessing, the palindrome logic compares characters from both ends of the normalized string.
+- A PalindromeStrategy interface
+- A concrete StackStrategy implementation
+- Runtime strategy injection in the main class
 
-Example:
-"A man a plan a canal Panama"
+This design allows new palindrome algorithms to be added without modifying existing logic.
 
 ---
 
 ## 🔑 Key Concepts Used
 
-- String preprocessing
-- Regular expressions (replaceAll)
-- Case normalization (toLowerCase)
-- Symmetric character comparison
+- Interface
+- Polymorphism
+- Strategy Design Pattern
+- Algorithm interchangeability
+- Encapsulation
 
 ---
 
-## ⚙️ Data Structure Used
+## ⚙️ Design Structure
 
-- String (normalized string)
-- Character indexing
+PalindromeStrategy (Interface)
+↓
+StackStrategy (Concrete Implementation)
+↓
+PalindromeCheckerApp (Client)
 
 ---
 
-## ⏱ Complexity
+## ⏱ Complexity (Stack Strategy)
 
-Time Complexity: O(n)  
+Time Complexity: O(n)
 Space Complexity: O(n)
 
 ---
 
 ## 🖥 Sample Output
 
-Input : A man a plan a canal Panama  
+Input : Level  
 Is Palindrome? : true
 
 ---
@@ -54,10 +57,10 @@ Is Palindrome? : true
 ## ▶️ Compile & Run
 
 Compile:
-javac UseCase10PalindromeCheckerApp.java
+javac App/src/PalindromeCheckerApp.java
 
 Run:
-java UseCase10PalindromeCheckerApp
+java -cp App/src PalindromeCheckerApp
 
 ---
 
