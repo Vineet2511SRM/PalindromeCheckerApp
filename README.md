@@ -1,103 +1,64 @@
-# 🧩 Palindrome Checker Management System
+# 🧩 Palindrome Checker App
+## Use Case 6 — Queue + Stack Based Palindrome Check
 
-A console-based Java application that validates whether a given string is a palindrome using different validation techniques across progressive use cases.
-
-This project strengthens **core programming fundamentals**, **data structure usage**, and **algorithm design thinking**.
-
----
-
-## 📌 Project Objective
-
-Design and implement a Java application that checks palindrome strings under multiple validation strategies while demonstrating algorithm efficiency and data structure usage.
+### 📌 Objective
+To validate whether a string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures.
 
 ---
 
-## 🚀 Implemented Use Cases
+## 📖 Description
 
-### ✅ UC1 — Application Entry
+This implementation:
 
-Program initialization and execution structure.
+- Enqueues characters into a Queue (FIFO principle)
+- Pushes characters into a Stack (LIFO principle)
+- Compares dequeue result with pop result
+- Confirms palindrome if all characters match
 
-### ✅ UC2 — Two-Pointer String Comparison
+This use case clearly demonstrates the behavioral difference between Queue and Stack.
 
-Direct comparison from both ends of string.
+---
 
-### ✅ UC3 — Reverse String Comparison
+## 🔑 Key Concepts Used
 
-Reverse string and compare with original.
+- Queue (First In First Out)
+- Enqueue & Dequeue Operations
+- Stack (Last In First Out)
+- Push & Pop Operations
+- Logical symmetric comparison
 
-### ✅ UC4 — Character Array Based Validation
+---
 
-Convert string to `char[]` and compare using index-based access.
+## ⚙️ Data Structures Used
 
-### ✅ UC5 — Stack Based Palindrome Checker ⭐
+- Queue<Character>
+- Stack<Character>
 
-**Goal**
-Use stack to reverse characters and validate palindrome.
+---
 
-**Flow**
+## ⏱ Complexity
 
-1. Push characters into stack
-2. Pop characters in reverse order
-3. Compare with original string
-4. Print result
+Time Complexity: O(n)  
+Space Complexity: O(n)
 
-**Key Concepts**
+---
 
-* Stack (LIFO structure)
-* Push operation
-* Pop operation
-* Natural reversal behavior
-* Data structure driven validation
+## 🖥 Sample Output
 
-**Data Structure:** Stack
-**Time Complexity:** O(n)
-**Space Complexity:** O(n)
-
-**Sample Output**
-
-```
-Input : noon
+Input : civic  
 Is Palindrome? : true
-```
 
 ---
 
-## 🏗️ Approach Comparison
+## ▶️ Compile & Run
 
-| Use Case | Method          | Extra Space | Concept Focus           |
-| -------- | --------------- | ----------- | ----------------------- |
-| UC2      | Two-pointer     | None        | Efficient comparison    |
-| UC3      | Reverse string  | O(n)        | Transformation          |
-| UC4      | Character array | Minimal     | Index-based access      |
-| UC5      | Stack           | O(n)        | Data structure reversal |
+Compile:
+javac App/src/PalindromeCheckerApp.java
 
----
-
-## ▶️ How to Compile and Run
-
-### Compile
-
-```bash
-javac PalindromeCheckerApp.java
-```
-
-### Run
-
-```bash
-java PalindromeCheckerApp
-```
+Run:
+java -cp App/src PalindromeCheckerApp
 
 ---
 
-## 🛠️ Technologies Used
-
-* Java 17+
-* Git & GitHub
-
----
-
-## 👨‍💻 Author
-
-**Vineet Seth**
-GitHub: https://github.com/Vineet2511SRM
+## 👩‍💻 Author
+Vineet Seth
