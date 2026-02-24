@@ -1,58 +1,83 @@
 /**
  *
- * MAIN CLASS - UseCase10PalindromeCheckerApp
+ * MAIN CLASS - PalindromeCheckerApp
  *
- * Use Case 10: Normalized Palindrome Validation
+ * Use Case 12: Strategy Pattern for Palindrome Algorithms
  *
  * Description:
- * This class validates a palindrome after preprocessing
- * the input string.
+ * This class demonstrates how different palindrome
+ * validation algorithms can be selected dynamically
+ * at runtime using the Strategy Design Pattern.
  *
- * Normalization includes:
- * - Removing spaces and symbols
- * - Converting to lowercase
+ * At this stage, the application:
+ * - Defines a common PalindromeStrategy interface
+ * - Implements a concrete Stack-based strategy
+ * - Injects the strategy at runtime
+ * - Executes the selected algorithm
  *
- * This ensures the palindrome check is logical rather
- * than character-format dependent.
- *
- * Example:
- * "A man a plan a canal Panama"
+ * No performance comparison is done in this use case.
+ * The focus is purely on algorithm interchangeability.
  *
  * @author Vineet Seth
- * @version 10.0
+ * @version 12.0
  */
 
 public class PalindromeCheckerApp {
 
-    /**
-     * Application entry point for UC10.
-     *
-     * @param args Command-line arguments
-     */
     public static void main(String[] args) {
 
-        String input = "A man a plan a canal Panama";
+        String input = "Level";
 
-        // Normalize string:
-        // 1. Remove non-alphanumeric characters
-        // 2. Convert to lowercase
-        String normalized = input.replaceAll("[^a-zA-Z0-9]", "")
-                .toLowerCase();
+        // Strategy injection
+        PalindromeStrategy strategy = new StackStrategy();
 
-        boolean isPalindrome = true;
+        // Execute selected strategy
+        boolean result = strategy.check(input.toLowerCase());
 
-        // Compare characters from both ends
-        for (int i = 0; i < normalized.length() / 2; i++) {
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + result);
+    }
+}
 
-            if (normalized.charAt(i) !=
-                    normalized.charAt(normalized.length() - 1 - i)) {
+/**
+ * INTERFACE - PalindromeStrategy
+ *
+ * This interface defines a contract for all
+ * palindrome checking algorithms.
+ */
+interface PalindromeStrategy {
 
-                isPalindrome = false;
-                break;
+    boolean check(String input);
+}
+
+/**
+ * CLASS - StackStrategy
+ *
+ * This class provides a Stack-based implementation
+ * of the PalindromeStrategy interface.
+ *
+ * It uses LIFO behavior to reverse characters
+ * and compare them with the original sequence.
+ */
+class StackStrategy implements PalindromeStrategy {
+
+    @Override
+    public boolean check(String input) {
+
+        java.util.Stack<Character> stack = new java.util.Stack<>();
+
+        // Push each character onto the stack
+        for (char c : input.toCharArray()) {
+            stack.push(c);
+        }
+
+        // Compare by popping from stack
+        for (char c : input.toCharArray()) {
+            if (c != stack.pop()) {
+                return false;
             }
         }
 
-        System.out.println("Input : " + input);
-        System.out.println("Is Palindrome? : " + isPalindrome);
+        return true;
     }
 }
