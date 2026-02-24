@@ -1,8 +1,8 @@
 # 🧩 Palindrome Checker App
-## Use Case 6 — Queue + Stack Based Palindrome Check
+## Use Case 7 — Deque-Based Optimized Palindrome Checker
 
 ### 📌 Objective
-To validate whether a string is a palindrome using both Queue (FIFO) and Stack (LIFO) data structures.
+To validate whether a string is a palindrome using a Deque (Double Ended Queue) for efficient front and rear comparison.
 
 ---
 
@@ -10,29 +10,28 @@ To validate whether a string is a palindrome using both Queue (FIFO) and Stack (
 
 This implementation:
 
-- Enqueues characters into a Queue (FIFO principle)
-- Pushes characters into a Stack (LIFO principle)
-- Compares dequeue result with pop result
+- Inserts characters into a Deque
+- Removes first and last elements
+- Compares them directly
 - Confirms palindrome if all characters match
 
-This use case clearly demonstrates the behavioral difference between Queue and Stack.
+This approach is optimized because it avoids using separate data structures like Stack and Queue.
 
 ---
 
 ## 🔑 Key Concepts Used
 
-- Queue (First In First Out)
-- Enqueue & Dequeue Operations
-- Stack (Last In First Out)
-- Push & Pop Operations
-- Logical symmetric comparison
+- Deque (Double Ended Queue)
+- Front and Rear Access
+- addLast(), removeFirst(), removeLast()
+- Direct symmetric comparison
+- Optimized data handling
 
 ---
 
-## ⚙️ Data Structures Used
+## ⚙️ Data Structure Used
 
-- Queue<Character>
-- Stack<Character>
+- Deque<Character> (Implemented using LinkedList)
 
 ---
 
@@ -45,7 +44,7 @@ Space Complexity: O(n)
 
 ## 🖥 Sample Output
 
-Input : civic  
+Input : level  
 Is Palindrome? : true
 
 ---
@@ -60,5 +59,5 @@ java -cp App/src PalindromeCheckerApp
 
 ---
 
-## 👩‍💻 Author
+## 👨‍💻 Author
 Vineet Seth
