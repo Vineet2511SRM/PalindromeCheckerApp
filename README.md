@@ -1,51 +1,54 @@
 # 🧩 Palindrome Checker App
-## Use Case 9 — Recursive Palindrome Checker
+## Use Case 11 — Object-Oriented Palindrome Service
 
 ### 📌 Objective
-To validate whether a string is a palindrome using recursion.
+To implement palindrome validation using object-oriented design principles.
 
 ---
 
 ## 📖 Description
 
-This implementation:
+This implementation encapsulates the palindrome logic inside a separate service class.
 
-- Uses recursive method calls
-- Compares characters from start and end
-- Moves inward with each recursive call
-- Stops when:
-  - All characters match, or
-  - A mismatch is found
+The main class:
+- Creates a PalindromeService object
+- Calls the checkPalindrome() method
+- Displays the result
 
-This demonstrates divide-and-conquer logic using recursion.
+This design follows OOPS principles and improves modularity.
 
 ---
 
 ## 🔑 Key Concepts Used
 
-- Recursion
-- Base condition
-- Call stack behavior
-- Divide-and-conquer approach
+- Encapsulation
+- Single Responsibility Principle
+- Separation of concerns
+- Object instantiation
+- Method invocation
 
 ---
 
-## ⚙️ Data Structure Used
+## ⚙️ Design Structure
 
-- Call Stack (Implicit through recursion)
+Main Class:
+- Handles user input and output
+
+Service Class:
+- Contains palindrome logic
 
 ---
 
 ## ⏱ Complexity
 
 Time Complexity: O(n)  
-Space Complexity: O(n) (due to recursive call stack)
+Space Complexity: O(1)
 
 ---
 
 ## 🖥 Sample Output
 
-Input : madam  
+Input : racecar  
 Is Palindrome? : true
 
 ---
